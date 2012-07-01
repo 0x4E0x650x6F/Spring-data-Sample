@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="classpath:/META-INF/spring/app-context.xml" />
+
+
+
+	<bean id="userList"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="sourceList">
+			<list value-type="com.xneox.data.domains.User">
+				<ref bean="user1" />
+				<ref bean="user2" />
+				<ref bean="user3" />
+				<ref bean="user4" />
+				<ref bean="user5" />
+				<ref bean="user6" />
+				<ref bean="user7" />
+				<ref bean="user8" />
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="user1" class="com.xneox.data.domains.User">
+		<property name="firstname" value="user1firstname"></property>
+		<property name="lastname" value="user1lastname"></property>
+	</bean>
+
+	<bean id="user2" class="com.xneox.data.domains.User">
+		<property name="firstname" value="user2firstname"></property>
+		<property name="lastname" value="user2lastname"></property>
+	</bean>
+
+	<bean id="user3" class="com.xneox.data.domains.User">
+		<property name="firstname" value="user3firstname"></property>
+		<property name="lastname" value="user3lastname"></property>
+	</bean>
+
+	<bean id="user4" class="com.xneox.data.domains.User">
+		<property name="firstname" value="user4firstname"></property>
+		<property name="lastname" value="user4lastname"></property>
+	</bean>
+
+	<bean id="user5" class="com.xneox.data.domains.User">
+		<property name="firstname" value="user5firstname"></property>
+		<property name="lastname" value="user5lastname"></property>
+	</bean>
+
+	<bean id="user6" class="com.xneox.data.domains.User">
+		<property name="firstname" value="user6firstname"></property>
+		<property name="lastname" value="user6lastname"></property>
+	</bean>
+
+	<bean id="user7" class="com.xneox.data.domains.User">
+		<property name="firstname" value="user7firstname"></property>
+		<property name="lastname" value="user7lastname"></property>
+	</bean>
+
+	<bean id="user8" class="com.xneox.data.domains.User">
+		<property name="firstname" value="user8firstname"></property>
+		<property name="lastname" value="user8lastname"></property>
+	</bean>
+
+</beans>

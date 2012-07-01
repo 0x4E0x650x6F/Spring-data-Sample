@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="classpath:/META-INF/spring/app-context.xml" />
+
+	<bean id="logsList"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="sourceList">
+			<list value-type="com.xneox.data.domains.Log">
+				<ref bean="log1" />
+				<ref bean="log2" />
+				<ref bean="log3" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="log1" class="com.xneox.data.domains.Log">
+		<property name="error" value="1"></property>
+		<property name="timestap"><value>1341172560</value></property>
+		<property name="local" value="home"></property>
+		<property name="process" value="createuser"></property>
+		<property name="service" value="userscreation"></property>
+		<property name="inputMessage" value="blaslasdasdasdasd"></property>
+		<property name="outPutMessage" value="buh"></property>
+	</bean>
+	<bean id="log2" class="com.xneox.data.domains.Log">
+		<property name="error" value="2"></property>
+		<property name="timestap"><value>1333310160</value></property>
+		<property name="local" value="work"></property>
+		<property name="process" value="createservice"></property>
+		<property name="service" value="servicecreation"></property>
+		<property name="inputMessage" value="blaslasdasdasdasd"></property>
+		<property name="outPutMessage" value="buh"></property>
+	</bean>
+	<bean id="log3" class="com.xneox.data.domains.Log">
+		<property name="error" value="3"></property>
+		<property name="timestap"><value>1325447760</value></property>
+		<property name="local" value="street"></property>
+		<property name="process" value="creategroup"></property>
+		<property name="service" value="groupcreation"></property>
+		<property name="inputMessage" value="blaslasdasdasdasd"></property>
+		<property name="outPutMessage" value="buh"></property>
+	</bean>
+	
+</beans>
